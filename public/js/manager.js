@@ -1,5 +1,5 @@
 // const deployURL="http://localhost:3000/";
-const deployURL="http://5610project2.vercel.app/";
+const deployURL="http://intense-lowlands-69751.herokuapp.com/";
 
 const rowSelectColor = '#F5F5F5';
 const rowClearColor = 'white';

@@ -1,5 +1,5 @@
 // const deployURL="http://localhost:3000/";
-const deployURL="http://5610project2.vercel.app/";
+const deployURL="http://intense-lowlands-69751.herokuapp.com/";
 
 const registerURL = deployURL+'api/register/';
 
