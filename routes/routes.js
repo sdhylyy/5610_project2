@@ -3,8 +3,6 @@ const myDB = require('mongodb');
 const { ObjectId } = require('mongodb');
 const fileUpload = require('express-fileupload');
 
-const PORT = process.env.PORT || 3000;
-
 const router = express.Router();
 const dbFunctions = require('../db/dbFunctions');
 const crypto = require('crypto');
@@ -90,6 +88,7 @@ router.delete('/api/deletename/:id', async (req, res) => {
 
   if (id && ObjectId.isValid(id)) {
     try {
+      await deleteFileById(id);
       respObj = await dbFunctions.deleteDoc(id);
     } catch (err) {
       console.error('# Delete Error', err);
@@ -149,17 +148,7 @@ router.post('/api/upload/:id', async (req, res) => {
   });
   let existFile=null;
   try {
-    existFile=(await dbFunctions.findItemById(id)).bol;
-    // console.log("existFile:"+existFile);
-    //replace current file
-    if(existFile&&existFile!=""){
-      fs.unlink(uploadDir+existFile, (err => {
-        if (err){console.log(err)} 
-        else {
-          console.log("\nDeleted file: "+uploadDir+existFile);
-        }
-      }));
-    }
+    await deleteFileById(id);
     await dbFunctions.updateItemById(id,{bol:newFileName});
   } catch (err) {
     console.error('# update Error', err);
@@ -181,5 +170,19 @@ router.get('/api/logout',(req, res) => {
   req.session.login = false;
   res.redirect("/?msg=log out succeed");
 })
+async function deleteFileById(id){
+  existFile=(await dbFunctions.findItemById(id)).bol;
+
+  // console.log("existFile:"+existFile);
+  //delete file
+  if(existFile&&existFile!=""){
+    fs.unlink(uploadDir+existFile, (err => {
+      if (err){console.log(err)} 
+      else {
+        console.log("\nDeleted file: "+uploadDir+existFile);
+      }
+    }));
+  }
+}
 
 module.exports = router;
