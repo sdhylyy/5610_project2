@@ -1,5 +1,5 @@
-// const deployURL="http://localhost:3000/";
-const deployURL="https://intense-lowlands-69751.herokuapp.com/";
+const deployURL="http://localhost:3000/";
+//const deployURL="https://intense-lowlands-69751.herokuapp.com/";
 
 const rowSelectColor = '#F5F5F5';
 const rowClearColor = 'white';
@@ -21,10 +21,11 @@ function checkMsg(){
       alert(msg);
   }
 }
-checkMsg();
+
 /* Functions */
 
 window.onload = () => {
+  checkMsg();
   document.getElementById('status').innerHTML = 'Fetching data...';
   table = document.getElementById('data-table');
   loadData();

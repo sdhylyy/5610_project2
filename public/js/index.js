@@ -1,5 +1,5 @@
-// const deployURL="http://localhost:3000/";
-const deployURL="https://intense-lowlands-69751.herokuapp.com/";
+const deployURL="http://localhost:3000/";
+// const deployURL="https://intense-lowlands-69751.herokuapp.com/";
 
 const loginURL = deployURL+'api/login/';
 
@@ -14,7 +14,10 @@ function checkMsg(){
         alert(msg);
     }
 }
-checkMsg();
+window.onload = () => {
+    checkMsg();
+};
+
 function checkForm(){
     let name = document.getElementById("username").value;　
     console.log(name);
