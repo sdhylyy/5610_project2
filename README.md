@@ -16,6 +16,7 @@ Drivers can view their delivery assignments and click finish when their job is d
 
 # Check It Out
 
+https://logistic-backend-five.vercel.app/
 # Install, Build & Run
 
 - Install [Node](https://nodejs.org) and [npm](https://www.npmjs.com) on your machine
@@ -26,7 +27,28 @@ Drivers can view their delivery assignments and click finish when their job is d
 
 # Screenshots
 
+1. Login Page
+
+   ![screen shot1](screenshots/login.PNG)
+
+2. Register Page
+
+   ![screen shot1](screenshots/register.PNG)
+
+3. Driver Page
+
+   ![screen shot1](screenshots/driver.PNG)
+
+4. Manager Page
+
+   ![screen shot1](screenshots/manager.PNG)
+
 # Author
 
 Tianyu Lu &&
 Yunxiao Li
+
+
+# Class link
+
+https://johnguerra.co/classes/webDevelopment_fall_2022/
