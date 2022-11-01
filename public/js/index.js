@@ -1,4 +1,7 @@
-const loginURL = 'http://localhost:3000/api/login/';
+// const deployURL="http://localhost:3000/";
+const deployURL="http://5610project2.vercel.app/";
+
+const loginURL = deployURL+'api/login/';
 
 document.getElementById("login-form").action =loginURL;
 

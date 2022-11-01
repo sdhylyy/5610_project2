@@ -1,9 +1,12 @@
+// const deployURL="http://localhost:3000/";
+const deployURL="http://5610project2.vercel.app/";
+
 const rowSelectColor = '#F5F5F5';
 const rowClearColor = 'white';
-const getByNameURL = 'http://localhost:3000/api/getByName/';
-const uploadURL='http://localhost:3000/api/upload/';
-const downloadURL='http://localhost:3000/api/download';
-const logoutURL='http://localhost:3000/api/logout'
+const getByNameURL = deployURL+'api/getByName/';
+const uploadURL=deployURL+'api/upload/';
+const downloadURL=deployURL+'api/download';
+const logoutURL=deployURL+'api/logout';
 
 let selectedRowIx;
 let prevSelection;

@@ -1,4 +1,7 @@
-const registerURL = 'http://localhost:3000/api/register/';
+// const deployURL="http://localhost:3000/";
+const deployURL="http://5610project2.vercel.app/";
+
+const registerURL = deployURL+'api/register/';
 
 document.getElementById("register-form").action =registerURL;
 console.log(document.getElementById("register-form").action);
