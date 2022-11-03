@@ -1,6 +1,7 @@
 //const deployURL="http://localhost:3000/";
 const deployURL="https://intense-lowlands-69751.herokuapp.com/";
 
+//I really like your naming conventions with the variables
 const rowSelectColor = '#F5F5F5';
 const rowClearColor = 'white';
 const getByNameURL = deployURL+'api/getByName/';
@@ -197,3 +198,4 @@ function buildTable(data) {
       document.getElementById('status').innerHTML = msg;
     });
   }
+// Nice work, and nice error handling
