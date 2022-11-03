@@ -31,3 +31,5 @@ app.use(router);
 app.listen(PORT, () => {
   console.log(`Listening for connections on port ${PORT}`);
 });
+
+// I think the session secret may need to be hidden in your .env file, but everything else looks good
