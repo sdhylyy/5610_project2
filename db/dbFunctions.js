@@ -41,3 +41,6 @@ module.exports = {
     return await db.collection(coll).updateOne({_id:ObjectId(id)},{$set:item});
   }
 };
+
+// Nothing to change. In our code, we did most of the business logic in these functions.
+// I like how these functions' sole purpose is to just interact with the database
