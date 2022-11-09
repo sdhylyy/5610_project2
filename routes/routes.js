@@ -24,7 +24,7 @@ router.get('/api/allnames', async (req, res) => {
     res.status(500).send({ error: err.name + ', ' + err.message });
   }
 });
-
+// If i'm not mistaken I think the redirects may have to be done in the frontend js code
 router.post('/api/login', async (req, res) => {
   let data = req.body;
 
@@ -101,7 +101,7 @@ router.delete('/api/deletename/:id', async (req, res) => {
 
   res.json(respObj);
 });
-
+// You could create a function that does a check for a faulty login value to save some lines of code
 router.get('/api/getByName', async (req, res) => {
   if (!req.session.login) {
     res.redirect("/?msg=login needed");
@@ -128,7 +128,7 @@ router.post('/api/upload/:id', async (req, res) => {
   if(!id||!ObjectId.isValid(id)){
     res.redirect("/driver.html?msg=invaild item id");
   }
-
+  // you can delete these console.log comments
   // console.log(req.files);
   if (!req.files) {
     return res.status(400).send("No files were uploaded.");
