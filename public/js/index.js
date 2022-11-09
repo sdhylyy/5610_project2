@@ -35,3 +35,5 @@ function checkForm(){
 
 　　return true;
 }
+
+// Nice code. Pretty straight forward!
