@@ -1,6 +1,7 @@
 //const deployURL="http://localhost:3000/";
 const deployURL="https://intense-lowlands-69751.herokuapp.com/";
 
+// I like your use of variable choice here, makes your code down below very intuitive
 const rowSelectColor = '#F5F5F5';
 const rowClearColor = 'white';
 const getURL = deployURL+'api/allnames/';
@@ -339,3 +340,6 @@ function logout(){
     document.getElementById('status').innerHTML = msg;
   });
 }
+
+// Nice code. Interesting how you invoke the functions by using
+// the onclick attribute within the HTML. Cool!
