@@ -11,6 +11,7 @@ const fs=require('fs');
 // console.log(crypto.randomUUID());
 // The route definitions for get, post and delete
 
+// redirects on backend instead of frontend
 router.get('/api/allnames', async (req, res) => {
   try {
     if (!req.session.login) {
